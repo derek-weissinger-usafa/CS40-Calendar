@@ -1660,7 +1660,7 @@
             const selectedPeriod = els.eventPeriod.value;
             if (isNoSchool) { els.periodGroup.style.display = 'none'; els.timeframeGroup.style.display = 'block'; els.customTimeCheckContainer.style.display = 'none'; } 
             else { els.periodGroup.style.display = 'block'; if (selectedPeriod === 'other') { els.customTimeCheckContainer.style.display = 'none'; els.timeframeGroup.style.display = 'block'; } else { els.customTimeCheckContainer.style.display = 'block'; els.timeframeGroup.style.display = els.customTimeCheck.checked ? 'block' : 'none'; }
-                const dayType = getDayType(dateStr); if (dayType.startsWith('T')) { els['opt-m5'].style.display = 'none'; if (els.eventPeriod.value === 'm5') els.eventPeriod.value = 'preflight'; } else { els['opt-m5'].style.display = 'block'; } }
+               const dayType = getDayType(dateStr); if (false) { els['opt-m5'].style.display = 'none'; if (els.eventPeriod.value === 'm5') els.eventPeriod.value = 'preflight'; } else { els['opt-m5'].style.display = 'block'; } }
         }
 
         els.customTimeCheck.addEventListener('change', () => updateModalOptions(els.eventDate.value));
